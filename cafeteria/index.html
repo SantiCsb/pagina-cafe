@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Rincón del Aroma - Café Artesanal</title>
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <span class="logo-icon"><i class="fas fa-mug-hot"></i></span>
+                <h1>El Rincón<br>del Aroma</h1>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#historia">Nuestra Esencia</a></li>
+                    <li><a href="#productos">Nuestros Tesoros</a></li>
+                    <li><a href="#contacto">Encuéntranos</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Donde cada grano cuenta una historia</h2>
+            <p>Descubre el auténtico sabor del café artesanal</p>
+            <a href="#productos" class="btn">Explorar selección</a>
+        </div>
+    </section>
+
+    <section id="historia" class="historia">
+        <div class="container">
+            <h2 class="section-title">Nuestra <span>Esencia</span></h2>
+            <div class="historia-content">
+                <div class="historia-text">
+                    <p>Desde 1995, en El Rincón del Aroma seleccionamos personalmente cada grano de café de pequeños productores de América Latina, tostándolos artesanalmente para preservar sus cualidades únicas.</p>
+                    <p>Nuestro secreto está en la pasión por el oficio y el respeto por los procesos naturales que hacen de cada taza una experiencia memorable.</p>
+                </div>
+                <div class="historia-img">
+                    <div class="img-overlay"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="productos" class="productos">
+        <div class="container">
+            <h2 class="section-title">Nuestros <span>Tesoros</span></h2>
+            <div class="productos-grid">
+                <div class="producto-card">
+                    <div class="producto-img" style="background-image: url(img/cafeespecial.jpg)"></div>
+                    <h3>Café Especial</h3>
+                    <p>Mezcla exclusiva de granos arábica tostados a la perfección</p>
+                    <span class="precio">$450</span>
+                </div>
+                
+                <div class="producto-card">
+                    <div class="producto-img" style="background-image: url(img/medialunas.jpg)"></div>
+                    <h3>Medialuna Premium</h3>
+                    <p>Hecha con mantequilla francesa y masa madre</p>
+                    <span class="precio">$320</span>
+                </div>
+                
+                <div class="producto-card">
+                    <div class="producto-img" style="background-image: url(img/tostados.jpg)"></div>
+                    <h3>Tostado Clásico</h3>
+                    <p>Pan rústico con jamón crudo y queso provolone</p>
+                    <span class="precio">$580</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contacto" class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Visítanos</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Av. Siempre Viva 742<br>Buenos Aires</p>
+                    <p><i class="fas fa-clock"></i> Lunes a Viernes: 8-20hs<br>Sábados: 9-22hs</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contáctanos</h3>
+                    <p><i class="fas fa-phone"></i> +54 11 1234-5678</p>
+                    <p><i class="fas fa-envelope"></i> hola@rinconaroma.com</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 El Rincón del Aroma. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Menú móvil
+        document.querySelector('.mobile-menu').addEventListener('click', function() {
+            document.querySelector('.nav').classList.toggle('active');
+        });
+        
+        // Efecto smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
